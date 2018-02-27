@@ -1,5 +1,5 @@
 import java.util.Scanner;
-public class map {
+public class map{
 	//initial amount of ships
 	//max ships
 	static int MAXSHIPS = 8;
@@ -11,7 +11,7 @@ public class map {
 	//sets ships
 	public static void looper(int a, String Player) {
 		Scanner input = new Scanner(System.in);
-		while(a<1) {
+		while(a<MAXSHIPS) {
 			System.out.println("You have "+(MAXSHIPS - a)+ " ships left.");
 			System.out.println("Enter the X coordinate");
 			int x = input.nextInt();

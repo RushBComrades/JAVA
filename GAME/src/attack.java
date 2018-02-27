@@ -1,8 +1,10 @@
 import java.util.Scanner;
 public class attack extends map{
+	static int player1ships = 8;
+	static int player2ships =8;
 	/*
 	 *attack.attack("Player1"); code to hit P1
-	 *attack.printAttackMap(1);       code for player 2 to view their hit on P1
+	 *attack.printAttackMap(1); code for player 2 to view their hit on P1
 	 */
 	public static void attack(String A) {
 		Scanner input = new Scanner(System.in);
@@ -13,8 +15,9 @@ public class attack extends map{
 		if(A.equals("Player2")) {
 			if(player2[x][y] == 1) {
 				player2[x][y]= 0;
-				player1Hits[x][y] = true;
+				player2Hits[x][y] = true;
 				System.out.println("Hit at "+"("+x +","+y+")");
+				player2ships--;
 			}else {
 				System.out.println("Miss at "+"("+x +","+y+")");
 			}
@@ -23,6 +26,7 @@ public class attack extends map{
 				player1[x][y]= 0;
 				player1Hits[x][y] = true;
 				System.out.println("Hit at "+"("+x +","+y+")");
+				player1ships--;
 			}else {
 				System.out.println("Miss at "+"("+x +","+y+")");
 			}
