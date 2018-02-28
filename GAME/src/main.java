@@ -9,8 +9,10 @@ public class main {
 		map.looper(0, "Player2");
 		map.printMap(2);
 		while(1==1) {
+			System.out.println("Player 1 is attacking.");
 			attack.attack("Player2");
 			attack.printAttackMap(2);
+			System.out.println("Player 2 is attacking.");
 			attack.attack("Player1");
 			attack.printAttackMap(1);
 			if(attack.player1ships == 0) {
